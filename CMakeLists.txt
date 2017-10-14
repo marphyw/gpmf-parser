@@ -7,4 +7,6 @@ set(CMAKE_CONFIGURATION_TYPES "Debug;Release")
 
 file(GLOB SOURCES GPMF_parser.c "demo/*.c")
 
-add_executable(gpmf-parser ${SOURCES})
+add_library(gpmf-parser SHARED GPMF_parser.c)
+
+add_executable(gpmf-parser-demo ${SOURCES})
